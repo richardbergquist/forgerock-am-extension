@@ -8,11 +8,11 @@ import com.sun.identity.shared.debug.Debug;
 
 import java.util.Map;
 
-public class CustomSMSGateway implements SMSGateway {
+public class BlankSMSGateway implements SMSGateway {
 
   protected Debug debug = null;
 
-  public CustomSMSGateway() {
+  public BlankSMSGateway() {
     this.debug = Debug.getInstance("amAuthHOTP");
   }
 
@@ -36,7 +36,7 @@ public class CustomSMSGateway implements SMSGateway {
     }
 
     if (debug.messageEnabled()) {
-      debug.message("CustomSMSGateway.sendSMSMessage() : " +  " HOTP sending to : " + to + ".");
+      debug.message("BlankSMSGateway.sendSMSMessage() : " +  " HOTP sending to : " + to + ".");
     }
   }
 
@@ -54,7 +54,7 @@ public class CustomSMSGateway implements SMSGateway {
    * @throws AuthLoginException In case the module was unable to send the e-mail
    */
   public void sendEmail(String from, String to, String subject, String message, String code, Map options) throws AuthLoginException {
-
+    sendSMSMessage(from, to, subject, message, code, options);
   }
 
 
