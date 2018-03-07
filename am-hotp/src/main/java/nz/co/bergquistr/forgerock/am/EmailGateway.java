@@ -27,16 +27,55 @@ public class EmailGateway implements SMSGateway {
   boolean sslEnabled = true;
   private boolean startTls = false;
 
+  /**
+   * Default constructor. Initialise debugger.
+   */
   public EmailGateway() {
     debug = Debug.getInstance("amAuthHOTP");
   }
 
+
   /**
-   * {@inheritDoc}
+   * Configures the email gateway with server options.
+   * <p>
+   *
+   * @param options The Map of server connection options.
+   */
+  private void setOptions(Map options) {
+    smtpHostName = CollectionHelper.getMapAttr(options, SMTPHOSTNAME);
+    smtpHostPort = CollectionHelper.getMapAttr(options, SMTPHOSTPORT);
+    smtpUserName = CollectionHelper.getMapAttr(options, SMTPUSERNAME);
+    smtpUserPassword = CollectionHelper.getMapAttr(options, SMTPUSERPASSWORD);
+    smtpSSLEnabled = CollectionHelper.getMapAttr(options, SMTPSSLENABLED);
+
+    if (smtpSSLEnabled != null) {
+      if (smtpSSLEnabled.equals("Non SSL")) {
+        sslEnabled = false;
+      } else if (smtpSSLEnabled.equals("Start TLS")) {
+        sslEnabled = false;
+        startTls = true;
+      }
+    }
+  }
+
+  /**
+   * Sends a SMS message to the phone with the code.
+   * <p>
+   *
+   * @param from The address that sends the SMS message
+   * @param to The address that the SMS message is sent
+   * @param subject The SMS subject
+   * @param message The content contained in the SMS message
+   * @param code The code in the SMS message
+   * @param options The SMS gateway options defined in the HOTP authentication
+   * module
+   * @throws AuthLoginException In case the module was unable to send the SMS
    */
   public void sendSMSMessage(String from, String to, String subject, String message, String code, Map options) throws AuthLoginException {
 
-    System.out.println("---------> EmailGateway.sendSMSMessage - HAS BEEN CALLED !");
+    System.out.println("--> EmailGateway.sendSMSMessage - HAS BEEN CALLED !");
+    debug.message("--> EmailGateway.sendSMSMessage - HAS BEEN CALLED !");
+
     if (to == null) {
       return;
     }
@@ -70,27 +109,23 @@ public class EmailGateway implements SMSGateway {
   }
 
   /**
-   * {@inheritDoc}
+   * Sends a SMS message to the phone with the code.
+   * <p>
+   *
+   * @param from The address that sends the SMS message
+   * @param to The address that the SMS message is sent
+   * @param subject The SMS subject
+   * @param message The content contained in the SMS message
+   * @param code The code in the SMS message
+   * @param options The SMS gateway options defined in the HOTP authentication
+   * module
+   * @throws AuthLoginException In case the module was unable to send the SMS
    */
   public void sendEmail(String from, String to, String subject, String message, String code, Map options) throws AuthLoginException {
 
+    System.out.println("--> EmailGateway.sendEmail - HAS BEEN CALLED !");
+    debug.message("--> EmailGateway.sendEmail - HAS BEEN CALLED !");
+
     sendSMSMessage(from, to, subject, message, code, options);
-  }
-
-  private void setOptions(Map options) {
-    smtpHostName = CollectionHelper.getMapAttr(options, SMTPHOSTNAME);
-    smtpHostPort = CollectionHelper.getMapAttr(options, SMTPHOSTPORT);
-    smtpUserName = CollectionHelper.getMapAttr(options, SMTPUSERNAME);
-    smtpUserPassword = CollectionHelper.getMapAttr(options, SMTPUSERPASSWORD);
-    smtpSSLEnabled = CollectionHelper.getMapAttr(options, SMTPSSLENABLED);
-
-    if (smtpSSLEnabled != null) {
-      if (smtpSSLEnabled.equals("Non SSL")) {
-        sslEnabled = false;
-      } else if (smtpSSLEnabled.equals("Start TLS")) {
-        sslEnabled = false;
-        startTls = true;
-      }
-    }
   }
 }

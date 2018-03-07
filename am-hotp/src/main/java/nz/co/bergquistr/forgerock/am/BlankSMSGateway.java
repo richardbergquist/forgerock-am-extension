@@ -8,16 +8,23 @@ import com.sun.identity.shared.debug.Debug;
 
 import java.util.Map;
 
+/**
+ * A Blank SMSGateway that simply logs its been called and does nothing.
+ *
+ */
 public class BlankSMSGateway implements SMSGateway {
 
   protected Debug debug = null;
 
+  /**
+   * Default constructor. Initialise debugger.
+   */
   public BlankSMSGateway() {
     this.debug = Debug.getInstance("amAuthHOTP");
   }
 
   /**
-   * Sends a SMS message to the phone with the code
+   * Sends a SMS message to the phone with the code.
    * <p>
    *
    * @param from The address that sends the SMS message
@@ -31,6 +38,9 @@ public class BlankSMSGateway implements SMSGateway {
    */
   public void sendSMSMessage(String from, String to, String subject, String message, String code, Map options) throws AuthLoginException {
 
+    System.out.println("---------> BlankSMSGateway.sendSMSMessage - HAS BEEN CALLED !");
+    debug.message("--> BlankSMSGateway.sendSMSMessage - HAS BEEN CALLED !");
+
     if (to == null) {
       return;
     }
@@ -41,7 +51,7 @@ public class BlankSMSGateway implements SMSGateway {
   }
 
   /**
-   * Sends an email  message to the mail with the code
+   * Sends an email  message to the mail with the code.
    * <p>
    *
    * @param from The address that sends the E-mail message
@@ -54,6 +64,8 @@ public class BlankSMSGateway implements SMSGateway {
    * @throws AuthLoginException In case the module was unable to send the e-mail
    */
   public void sendEmail(String from, String to, String subject, String message, String code, Map options) throws AuthLoginException {
+    System.out.println("---------> BlankSMSGateway.sendEmail - HAS BEEN CALLED !");
+    debug.message("--> BlankSMSGateway.sendEmail - HAS BEEN CALLED !");
     sendSMSMessage(from, to, subject, message, code, options);
   }
 
