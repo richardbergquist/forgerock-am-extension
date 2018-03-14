@@ -1,0 +1,4 @@
+
+# This command generates the IDP metadata for the configured OpenAM IDP entity in the realm: /MyRealm
+
+curl  --output metadata.xml  "http://nzakdot1043rzrw-front.elinux.domain.co.nz:8080/openam/saml2/jsp/exportmetadata.jsp?entityid=http://nzakdot1043rzrw-front.elinux.domain.co.nz:8080/openam&realm=/MyRealm"

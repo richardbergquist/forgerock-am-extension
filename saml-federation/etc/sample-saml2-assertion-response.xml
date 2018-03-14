@@ -1,0 +1,98 @@
+<saml:Assertion xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion" xmlns:samlp="urn:oasis:names:tc:SAML:2.0:protocol"
+                ID="s2ec829d2a85f9f9ef8f2cbaaf22f81e70c59a4f11" IssueInstant="2018-03-08T22:10:32Z" Version="2.0">
+    <saml:Issuer>http://nzakdot1043rzrw-front.elinux.domain.co.nz:8080/openam</saml:Issuer>
+    <ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+        <ds:SignedInfo>
+            <ds:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+            <ds:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+            <ds:Reference URI="#s2ec829d2a85f9f9ef8f2cbaaf22f81e70c59a4f11">
+                <ds:Transforms>
+                    <ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+                    <ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+                </ds:Transforms>
+                <ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+                <ds:DigestValue>kbc01PKAiiVFZ03QaD5bLqQyhFs=</ds:DigestValue>
+            </ds:Reference>
+        </ds:SignedInfo>
+        <ds:SignatureValue>
+            MQUP6FWqQiEKtb4D6dzpvjfFvf34WQDzk3zCJQWJuJC1y7+2YdcfYJnGjNGnjr0uj4fFlxNO/fY/
+            A438FkVcIzRmbl+8AckMS+NvhKSO8rqX8meYm019BMIu/RF66Rv+UsG2y6RGtVLs9UWCmbnVJo7f
+            VVsgHnM5DOCzFCjO34y4iDDAbyZ9kDrmjOokSsQV9/xFATRexGbX/xWRmzxh86AUho5t9YbQyJhu
+            sMvMZ9Z4B3ojp2dBlfLz054QQrSdl3QaM4pXtVmlPhgKfyeACObn5fWChh6ugl3z2NkjRIc3LPPE
+            pU/mRea1BRKasf3T8XCNxy+/kNZhaxGxqwB9sQ==
+        </ds:SignatureValue>
+        <ds:KeyInfo>
+            <ds:X509Data>
+                <ds:X509Certificate>
+                    MIIDaDCCAlCgAwIBAgIDcB/YMA0GCSqGSIb3DQEBCwUAMGUxCzAJBgNVBAYTAlVLMRAwDgYDVQQI
+                    EwdCcmlzdG9sMRAwDgYDVQQHEwdCcmlzdG9sMRIwEAYDVQQKEwlGb3JnZVJvY2sxDzANBgNVBAsT
+                    Bk9wZW5BTTENMAsGA1UEAxMEdGVzdDAeFw0xNjAzMTgxMTU2MjhaFw0yNjAzMTYxMTU2MjhaMGUx
+                    CzAJBgNVBAYTAlVLMRAwDgYDVQQIEwdCcmlzdG9sMRAwDgYDVQQHEwdCcmlzdG9sMRIwEAYDVQQK
+                    EwlGb3JnZVJvY2sxDzANBgNVBAsTBk9wZW5BTTENMAsGA1UEAxMEdGVzdDCCASIwDQYJKoZIhvcN
+                    AQEBBQADggEPADCCAQoCggEBAKNbl89eP6B8kZATNSPe3+OZ3esLx31hjX+dakHtPwXCAaCKqJFw
+                    jwKdxyRuPdsVG+8Dbk3PGhk26aJrSE93EpxeqmQqxNPMeD+N0/8pjkuVYWwPIQ/ts2iTiWOVn7wz
+                    lE4ASfvupqOR5pjuYMWNo/pd4L7QNjUCKoAt9H11HMyiP+6roo/EYgX4AH7OAhfUMncYsopWhkW/
+                    ze9z8wTXc8BAEgDmt8zFCez1CtqJB/MlSBUGDgk8oHYDsHKmx05baBaOBQ8LRGP5SULSbRtu34eL
+                    FootBIn0FvUZSnwTiSpbaHHRgWrMOVm07oSLWBuO3h/bj38zBuuqqVsAK8YuyoECAwEAAaMhMB8w
+                    HQYDVR0OBBYEFHxfAbr6PQ5Xgc+jVx+AGTPnnpWZMA0GCSqGSIb3DQEBCwUAA4IBAQAZBMJ29/2i
+                    dv1ztC6ArHtB4kw/nHHwthXFwtWAN7sRPB8tLW7fD8aJ43RQr5107Bg1Lgkmt+FZxpafqUC/mukj
+                    IzGzbW0COMSOTcWUGss+HxK6M6Fl9aOzKJMct1uOSpPFgjItcGqydGZXR2FH93vXWoAotUwtZ119
+                    IixIdxpOJwYJg0HFn+GEfpU1PmiLfq2/uwqJ0hGCNfNcm9puagzhQrcDFOnolxjnYPSfSkU5wxlG
+                    o99yE5eJwoHXXU7csaZVttmx7sPj1lUENogXUM6JMqzSyEIm1XCOCL8rZJkZ781W5CwZhuJTNzV3
+                    1sBREs8FaaCeksu7Y48BmkUqw6E9
+                </ds:X509Certificate>
+            </ds:X509Data>
+        </ds:KeyInfo>
+    </ds:Signature>
+    <saml:Subject>
+        <saml:NameID Format="urn:oasis:names:tc:SAML:2.0:nameid-format:persistent"
+                     NameQualifier="http://nzakdot1043rzrw-front.elinux.domain.co.nz:8080/openam"
+                     SPNameQualifier="http://nzakdot1043rzrw-front.elinux.domain.co.nz:8080/openam">
+            rPHx2cFs0cNQgrOG4UXTDIbAnNCC
+        </saml:NameID>
+        <saml:SubjectConfirmation Method="urn:oasis:names:tc:SAML:2.0:cm:bearer">
+            <saml:SubjectConfirmationData InResponseTo="s211ce9166c0b548b302952aab85f4e741a18b08d8"
+                                          NotOnOrAfter="2018-03-08T22:20:32Z"
+                                          Recipient="http://nzakdot1043rzrw-front.elinux.domain.co.nz:8080/openam/Consumer/metaAlias/MyRealm/sp"/>
+        </saml:SubjectConfirmation>
+    </saml:Subject>
+    <saml:Conditions NotBefore="2018-03-08T22:00:32Z" NotOnOrAfter="2018-03-08T22:20:32Z">
+        <saml:AudienceRestriction>
+            <saml:Audience>http://nzakdot1043rzrw-front.elinux.domain.co.nz:8080/openam</saml:Audience>
+        </saml:AudienceRestriction>
+    </saml:Conditions>
+    <saml:AuthnStatement AuthnInstant="2018-03-08T22:10:32Z" SessionIndex="s23546d786ac3f4ccb45d5a5decf45b2e987612b01">
+        <saml:AuthnContext>
+            <saml:AuthnContextClassRef>urn:oasis:names:tc:SAML:2.0:ac:classes:Password</saml:AuthnContextClassRef>
+        </saml:AuthnContext>
+    </saml:AuthnStatement>
+    <saml:AttributeStatement>
+        <saml:Attribute Name="uid">
+            <saml:AttributeValue xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">
+                03b60902-c999-4135-8d2f-afedf16cff67
+            </saml:AttributeValue>
+        </saml:Attribute>
+        <saml:Attribute Name="cn">
+            <saml:AttributeValue xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">Test.Delta2
+            </saml:AttributeValue>
+        </saml:Attribute>
+        <saml:Attribute Name="sn">
+            <saml:AttributeValue xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">Alpha
+            </saml:AttributeValue>
+        </saml:Attribute>
+        <saml:Attribute Name="mail">
+            <saml:AttributeValue xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">
+                test.alpha1@mail.com
+            </saml:AttributeValue>
+        </saml:Attribute>
+        <saml:Attribute Name="givenName">
+            <saml:AttributeValue xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">Test
+            </saml:AttributeValue>
+        </saml:Attribute>
+    </saml:AttributeStatement>
+</saml:Assertion>

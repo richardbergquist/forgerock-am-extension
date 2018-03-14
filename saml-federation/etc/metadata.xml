@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<EntityDescriptor entityID="http://nzakdot1043rzrw-front.elinux.domain.co.nz:8080/openam" xmlns="urn:oasis:names:tc:SAML:2.0:metadata">
+    <IDPSSODescriptor WantAuthnRequestsSigned="false" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+        <ArtifactResolutionService index="0" isDefault="true" Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="http://nzakdot1043rzrw-front.elinux.domain.co.nz:8080/openam/ArtifactResolver/metaAlias/MyRealm/idp"/>
+        <SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="http://nzakdot1043rzrw-front.elinux.domain.co.nz:8080/openam/IDPSloRedirect/metaAlias/MyRealm/idp" ResponseLocation="http://nzakdot1043rzrw-front.elinux.domain.co.nz:8080/openam/IDPSloRedirect/metaAlias/MyRealm/idp"/>
+        <SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="http://nzakdot1043rzrw-front.elinux.domain.co.nz:8080/openam/IDPSloPOST/metaAlias/MyRealm/idp" ResponseLocation="http://nzakdot1043rzrw-front.elinux.domain.co.nz:8080/openam/IDPSloPOST/metaAlias/MyRealm/idp"/>
+        <SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="http://nzakdot1043rzrw-front.elinux.domain.co.nz:8080/openam/IDPSloSoap/metaAlias/MyRealm/idp"/>
+        <ManageNameIDService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="http://nzakdot1043rzrw-front.elinux.domain.co.nz:8080/openam/IDPMniRedirect/metaAlias/MyRealm/idp" ResponseLocation="http://nzakdot1043rzrw-front.elinux.domain.co.nz:8080/openam/IDPMniRedirect/metaAlias/MyRealm/idp"/>
+        <ManageNameIDService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="http://nzakdot1043rzrw-front.elinux.domain.co.nz:8080/openam/IDPMniPOST/metaAlias/MyRealm/idp" ResponseLocation="http://nzakdot1043rzrw-front.elinux.domain.co.nz:8080/openam/IDPMniPOST/metaAlias/MyRealm/idp"/>
+        <ManageNameIDService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="http://nzakdot1043rzrw-front.elinux.domain.co.nz:8080/openam/IDPMniSoap/metaAlias/MyRealm/idp"/>
+        <NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</NameIDFormat>
+        <NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</NameIDFormat>
+        <NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress</NameIDFormat>
+        <NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified</NameIDFormat>
+        <NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:WindowsDomainQualifiedName</NameIDFormat>
+        <NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:kerberos</NameIDFormat>
+        <NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:X509SubjectName</NameIDFormat>
+        <SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="http://nzakdot1043rzrw-front.elinux.domain.co.nz:8080/openam/SSORedirect/metaAlias/MyRealm/idp"/>
+        <SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="http://nzakdot1043rzrw-front.elinux.domain.co.nz:8080/openam/SSOPOST/metaAlias/MyRealm/idp"/>
+        <SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="http://nzakdot1043rzrw-front.elinux.domain.co.nz:8080/openam/SSOSoap/metaAlias/MyRealm/idp"/>
+        <NameIDMappingService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="http://nzakdot1043rzrw-front.elinux.domain.co.nz:8080/openam/NIMSoap/metaAlias/MyRealm/idp"/>
+        <AssertionIDRequestService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="http://nzakdot1043rzrw-front.elinux.domain.co.nz:8080/openam/AIDReqSoap/IDPRole/metaAlias/MyRealm/idp"/>
+        <AssertionIDRequestService Binding="urn:oasis:names:tc:SAML:2.0:bindings:URI" Location="http://nzakdot1043rzrw-front.elinux.domain.co.nz:8080/openam/AIDReqUri/IDPRole/metaAlias/MyRealm/idp"/>
+    </IDPSSODescriptor>
+    <SPSSODescriptor AuthnRequestsSigned="false" WantAssertionsSigned="false" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+        <SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="http://nzakdot1043rzrw-front.elinux.domain.co.nz:8080/openam/SPSloRedirect/metaAlias/MyRealm/sp" ResponseLocation="http://nzakdot1043rzrw-front.elinux.domain.co.nz:8080/openam/SPSloRedirect/metaAlias/MyRealm/sp"/>
+        <SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="http://nzakdot1043rzrw-front.elinux.domain.co.nz:8080/openam/SPSloPOST/metaAlias/MyRealm/sp" ResponseLocation="http://nzakdot1043rzrw-front.elinux.domain.co.nz:8080/openam/SPSloPOST/metaAlias/MyRealm/sp"/>
+        <SingleLogoutService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="http://nzakdot1043rzrw-front.elinux.domain.co.nz:8080/openam/SPSloSoap/metaAlias/MyRealm/sp"/>
+        <ManageNameIDService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="http://nzakdot1043rzrw-front.elinux.domain.co.nz:8080/openam/SPMniRedirect/metaAlias/MyRealm/sp" ResponseLocation="http://nzakdot1043rzrw-front.elinux.domain.co.nz:8080/openam/SPMniRedirect/metaAlias/MyRealm/sp"/>
+        <ManageNameIDService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="http://nzakdot1043rzrw-front.elinux.domain.co.nz:8080/openam/SPMniPOST/metaAlias/MyRealm/sp" ResponseLocation="http://nzakdot1043rzrw-front.elinux.domain.co.nz:8080/openam/SPMniPOST/metaAlias/MyRealm/sp"/>
+        <ManageNameIDService Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP" Location="http://nzakdot1043rzrw-front.elinux.domain.co.nz:8080/openam/SPMniSoap/metaAlias/MyRealm/sp" ResponseLocation="http://nzakdot1043rzrw-front.elinux.domain.co.nz:8080/openam/SPMniSoap/metaAlias/MyRealm/sp"/>
+        <NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</NameIDFormat>
+        <NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</NameIDFormat>
+        <NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress</NameIDFormat>
+        <NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified</NameIDFormat>
+        <NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:WindowsDomainQualifiedName</NameIDFormat>
+        <NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:kerberos</NameIDFormat>
+        <NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:X509SubjectName</NameIDFormat>
+        <AssertionConsumerService index="0" isDefault="true" Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="http://nzakdot1043rzrw-front.elinux.domain.co.nz:8080/openam/Consumer/metaAlias/MyRealm/sp"/>
+        <AssertionConsumerService index="1" Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="http://nzakdot1043rzrw-front.elinux.domain.co.nz:8080/openam/Consumer/metaAlias/MyRealm/sp"/>
+        <AssertionConsumerService index="2" Binding="urn:oasis:names:tc:SAML:2.0:bindings:PAOS" Location="http://nzakdot1043rzrw-front.elinux.domain.co.nz:8080/openam/Consumer/ECP/metaAlias/MyRealm/sp"/>
+    </SPSSODescriptor>
+</EntityDescriptor>
+
+
